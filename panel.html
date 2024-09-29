@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/panel.css">
+    <link rel="stylesheet" href="css/flexboxgrid.css">
+    <script
+      src="https://kit.fontawesome.com/1884dedbc0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Panel</title>
+</head>
+<body>
+    <div id="panel" class="panel">
+        <div id="right">
+            <section class="menu">
+                <div class="user-info">
+                    <div class="img-name">
+                        <img src="images/porofile.jpg" alt="">
+                        <span class="name">کوشیار شهبازی</span>
+                        <i onclick="toggleUserDetails()" class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="details">
+                        <div class="details-item">
+                            <span>سطح دسترسی :</span>
+                            <span>ادمین</span>
+                        </div>
+                        <div class="details-item">
+                            <span>وضعیت :</span>
+                            <span>آنلاین</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-btns">
+                    <a href="" class="item">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>محصولات</span>
+                    </a>
+                    <a href="" class="item active">
+                        <i class="fa-brands fa-first-order"></i>
+                        <span>سفارش ها</span>
+                    </a>
+                    <a href="" class="item">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>گزارش ها</span>
+                    </a>
+                    <a href="" class="item">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>پشتیبانی</span>
+                    </a>
+                    <a href="" class="item">
+                        <i class="fa-solid fa-users"></i>
+                        <span>کاربرها</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <div id="left">
+            <section class="main-box">
+                <header>
+                    <nav>
+                        <div class="right">
+                            <i onclick="togglePanel()" class="fa-solid fa-bars"></i>
+                            <div class="search">
+                                <input type="text">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <a href=""><i class="fa-solid fa-bell"></i></a>
+                            <a href=""><i class="fa-solid fa-gear"></i></a>
+                            <a href=""><i class="fa-solid fa-power-off"></i></a>
+                        </div>
+                    </nav>
+                    <div class="header-message">
+                        <h3>آخرین ورود دو روز پیش</h3>
+                        <a href="" class="lang-btn">فارسی</a>
+                    </div>
+                </header>
+                <div class="holder">
+                    <div class="row">
+
+                        <div class="col-lg-3 col-xs-6">
+                            <div class="mini-card-report">
+                                <div class="right">
+                                    <i class="fa-solid fa-clipboard"></i>
+                                </div>
+                                <div class="left">
+                                    <span>تکمیل انبار</span>
+                                    <span>400</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-xs-6">
+                            <div class="mini-card-report">
+                                <div class="right">
+                                    <i class="fa-solid fa-cube"></i>
+                                </div>
+                                <div class="left">
+                                    <span>محصولات</span>
+                                    <span>430</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-xs-6">
+                            <div class="mini-card-report">
+                                <div class="right">
+                                    <i class="fa-solid fa-truck"></i>
+                                </div>
+                                <div class="left">
+                                    <span>تحویل پست</span>
+                                    <span>50</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-xs-6">
+                            <div class="mini-card-report">
+                                <div class="right">
+                                    <i class="fa-solid fa-dollar-sign"></i>
+                                </div>
+                                <div class="left">
+                                    <span>تسویه</span>
+                                    <span>200000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="revenue-box">
+                        <div class="head">
+                            <div class="right">درآمد</div>
+                            <div class="left">
+                                <i class="fa-solid fa-gear"></i>
+                                <i class="fa-solid fa-rotate-right"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <canvas id="myChart" width="300" height="150"></canvas>
+                        </div>
+                    </div>                    
+                </div>
+                
+            </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.0/dist/Chart.min.js"></script>
+    <script src="./js/panel.js"></script>
+</body>
+</html>
